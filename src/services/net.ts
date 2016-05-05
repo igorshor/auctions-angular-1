@@ -60,7 +60,7 @@ module NgAuctions.Services {
         private baseUrl:string;
 
         constructor(private $http:ng.IHttpService) {
-            this.baseUrl = 'http://localhost:3000/';
+            this.baseUrl = '//auctions-igorshor.c9users.io/';
         }
 
         public getAuctions():ng.IHttpPromise<IAuctionData[]> {

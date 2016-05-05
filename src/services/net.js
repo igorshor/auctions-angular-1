@@ -6,7 +6,7 @@ var NgAuctions;
         var NetService = (function () {
             function NetService($http) {
                 this.$http = $http;
-                this.baseUrl = 'http://localhost:3000/';
+                this.baseUrl = '//auctions-igorshor.c9users.io/';
             }
             NetService.prototype.getAuctions = function () {
                 return this.$http.get(this.baseUrl + "api/auctions");
