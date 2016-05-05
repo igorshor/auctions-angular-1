@@ -1,0 +1,145 @@
+<div class="modal fade" id="saleModal" tabindex="-1" role="dialog" aria-labelledby="saleModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        &times;
+                    </span>
+                </button>
+                Add Items For Sale
+            </div>
+            <div class="modal-body sale-form">
+                <form class="form" name="sellForm">
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label class="control-label" for="item">
+                                    Item:
+                                </label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 col-xs-12">
+                                <div>
+                                    <input type="text" class="form-control" id="item" ng-model="vm.product.Title"
+                                           required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-md-3 col-sm-12 col-xs-12">
+                                <label class="control-label" for="category">
+                                    Category:
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-12 col-xs-12">
+                                <div>
+                                    <select class="form-control" id="category"
+                                            ng-options="category.Name for category in vm.categories track by category.Id"
+                                            ng-model="vm.selectedCategory" required>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label class="control-label" for="description">
+                                    Description:
+                                </label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 col-xs-12">
+                                <div>
+                                    <textarea class="form-control" id="description" ng-model="vm.product.Description"
+                                              required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="col-md-3 col-sm-5 col-xs-12">
+                                <label class="control-label">
+                                    Condition:
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-12 col-xs-12">
+                                <div class="radio row">
+                                    <label>
+                                        <input type="radio" name="condition" value="1"
+                                               ng-model="vm.product.IsItemConditionNew" checked>
+                                        New
+                                    </label>
+                                </div>
+                                <div class="radio row">
+                                    <label>
+                                        <input type="radio" name="condition" value="0"
+                                               ng-model="vm.product.IsItemConditionNew">
+                                        Used
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label class="control-label" for="photo1">
+                                    Photos:
+                                </label>
+                            </div>
+                            <div class="col-md-10 col-sm-12 col-xs-12">
+                                <div class="photos-input-container">
+                                    <input type="text" class="form-control" id="photo1" ng-model="vm.product.Picture1"
+                                           required/>
+                                    <input type="text" class="form-control" ng-model="vm.product.Picture2"/>
+                                    <input type="text" class="form-control" ng-model="vm.product.Picture3"/>
+                                    <input type="text" class="form-control" ng-model="vm.product.Picture4"/>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 col-xs-12">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <label class="control-label" for="bid">
+                                    Start Action bidding at:
+                                </label>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-11">
+                                <div>
+                                    <input type="number" class="form-control" id="bid" value="0.00" step="0.01"
+                                           ng-model="vm.product.StartBid" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-1">
+                                <label>
+                                    NIS
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <label class="control-label" for="last">
+                                    Lasting for:
+                                </label>
+                            </div>
+                            <div class="col-md-8 col-sm-12 col-xs-12">
+                                <select class="form-control" id="last"
+                                        ng-options="date.futureDateString for date in vm.futureDates track by date.futureDateString"
+                                        ng-model="vm.selectedFutureDate" required>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer sale-footer">
+                <button type="submit" class="btn btn-lg btn-base btn-base-small-color"
+                        data-dismiss="modal" aria-label="Close" ng-click="vm.addAndSaveBtn()"
+                        ng-disabled="sellForm.$invalid">
+                    save and Preview
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

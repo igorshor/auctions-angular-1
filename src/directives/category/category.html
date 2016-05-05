@@ -1,0 +1,10 @@
+<div ng-class='{selected:vm.categorySelected}' ng-click="vm.onCategoryClick()">
+    <div class="color-block color-{{::vm.categoryNameLowerCase}}"></div>
+    <div class="category-details">
+        <img ng-src="styles/images/{{::vm.categoryNameLowerCase}}.png" ng-if="vm.categoryHaveImage">
+        {{vm.categoryNameUpperCase}}
+    </div>
+    <div class="category-hover color-{{::vm.categoryNameLowerCase}}">
+        <img ng-src="styles/images/{{::vm.categoryNameLowerCase}}_w.png" ng-if="vm.categoryHaveImage">
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<ol class="categories">
+    <li class="category" ng-repeat="category in vm.categories track by category.Id">
+        <category category-id="{{::category.Id}}" category-name="{{::category.Name}}"></category>
+    </li>
+</ol>
