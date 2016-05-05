@@ -38,6 +38,7 @@ module NgAuctions.Directives {
                     $element:JQuery,
                     private netService:Services.INetService,
                     private timeService:Services.ITimeService) {
+            
             this.vm = this;
             var listeners:Function[] = [];
 
