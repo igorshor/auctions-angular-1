@@ -71,7 +71,7 @@ module NgAuctions.Directives {
         }
 
         private initData() {
-            this.vm.categories = this.categoriesService.categories.slice(1, this.categoriesService.categories.length - 1);
+            this.vm.categories = this.categoriesService.categories.slice(1, this.categoriesService.categories.length);
 
             this.vm.futureDates = [
                 {futureDateString: '1 Day', futureDate: moment().add(1, 'days').toDate()},
@@ -107,7 +107,7 @@ module NgAuctions.Directives {
                 CategoryId: 1,
             };
 
-            this.selectedCategory = this.categories[1];
+            this.selectedCategory = this.categories[0];
             this.selectedFutureDate = this.futureDates[6];
         }
 
