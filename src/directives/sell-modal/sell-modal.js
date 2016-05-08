@@ -40,7 +40,7 @@ var NgAuctions;
                 });
             }
             SellModalController.prototype.initData = function () {
-                this.vm.categories = this.categoriesService.categories;
+                this.vm.categories = this.categoriesService.categories.slice(1, this.categoriesService.categories.length - 1);
                 this.vm.futureDates = [
                     { futureDateString: '1 Day', futureDate: moment().add(1, 'days').toDate() },
                     { futureDateString: '2 Days', futureDate: moment().add(2, 'days').toDate() },
