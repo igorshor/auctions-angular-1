@@ -1,0 +1,26 @@
+{
+  "name": "NgAuctionsAngular1",
+  "homepage": "https://github.com/igorshor/auctions-angular-1",
+  "authors": [
+    "Igor Shor <igors@codevalue.net>"
+  ],
+  "description": "-=-=-=-",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "jQuery.dotdotdot": "jquery.dotdotdot#~1.7.4",
+    "requirejs": "^2.2.0",
+    "moment": "~2.10.6"
+  }
+}

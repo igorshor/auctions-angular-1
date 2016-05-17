@@ -32,8 +32,7 @@
     "tag": "v1.7.4",
     "commit": "a4e7172e57994c2c2c5e456c943d2281eb6f7332"
   },
-  "_source": "git://github.com/BeSite/jQuery.dotdotdot.git",
+  "_source": "https://github.com/BeSite/jQuery.dotdotdot.git",
   "_target": "~1.7.4",
-  "_originalSource": "jquery.dotdotdot",
-  "_direct": true
+  "_originalSource": "jquery.dotdotdot"
 }
